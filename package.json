@@ -1,10 +1,13 @@
 {
   "name": "dt211g-2",
   "version": "1.0.0",
-  "type":"module",
-    "description": "",
+  "type": "module",
+  "description": "",
+  "source": "src/index.html",
   "main": "test.js",
   "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "sharp": "^0.31.3"
   }
 }

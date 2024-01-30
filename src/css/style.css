@@ -9,11 +9,20 @@ table {
     box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 1000px) {
+    table {
+        width: 60%;
+        margin-left: auto; /* Centers the table */
+        margin-right: auto; /* Centers the table */
+    }
+}
+
 /* Stilar för tabellhuvud */
 thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
+    font-size: 1.7em;
 }
 
 /* Lägger till zebra-stripning för rader */
@@ -38,3 +47,12 @@ th, td {
     padding: 1.2vw 1.5vw;
 }
 
+th:nth-child(1), td:nth-child(1) { /* First column */
+    width: 15%;
+    text-align: center;
+}
+
+th:nth-child(3), td:nth-child(3) { /* Third column */
+    width: 20%;
+    text-align: center;
+}

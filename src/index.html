@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DT211G-2</title>
-    <script src="test.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,16 +16,18 @@
 
     <table>
     <thead>
-        <th>Kurskod</th>
-        <th>Kursnamn</th>
-        <th>Progression</th>
-    </thead>
+        <thead>
+            <th id="header-code" onclick="toggleSort('code')">Kurskod <span></span></th>
+            <th id="header-coursename" onclick="toggleSort('coursename')">Kursnamn <span></span></th>
+            <th>Progression</th> <!-- Ingen sorteringsfunktion -->
+        </thead>
+                                            </thead>
     <tbody id="tabelldata">
 
     </tbody>
 
 </table>
-
+<script src="js/js.js"></script>
 </body>
 
 </html>
