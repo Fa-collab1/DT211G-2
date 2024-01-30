@@ -20,4 +20,18 @@ async function processData() {
     }
 }
 
+/*
+        <tr>
+            <td><a href="http://www.ica.se">Kurskod</a></td>
+            <td>Kursnamn</td>
+            <td>Progression</td>
+        </tr>
+
+    ska kunna göras:
+    Sortera i stigande och fallande ordning på kurskod, kursnamn och progression.
+    Filtrera på kursnamn och kurskod.
+
+*/
+
+
 processData();
