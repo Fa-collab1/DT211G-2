@@ -1,3 +1,9 @@
+'use strict';
+
+// Globala variabler för att hålla reda på data.
+let result = []; // Global variabel för att lagra resultatet från API-anropet
+let originalData = []; // En kopia av originaldatan för osorterat tillstånd
+
 // Globala variabler för att hålla reda på sorteringsläget för varje kolumn.
 let sortState = {
     code: 'unsorted',      // Sorteringsstatus för 'code'-kolumnen. (kurskod)
@@ -116,3 +122,4 @@ function sortData(column, isAscending) {
 }
 
 // Starta processen för att hämta och visa
+processData() 

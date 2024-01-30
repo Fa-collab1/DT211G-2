@@ -10,24 +10,24 @@
 
 <body>
     <h1>Webbutveckling ramschema</h1>
-    <div>
-        <input type="text" id="search" onkeyup="search()" placeholder="Sök efter kurskod eller kursnamn">
+    <div id="filterField">
+        <input type="text" id="search" onkeyup="filter()" placeholder="Filtrera på kurskod eller kursnamn">
     </div>
 
     <table>
-    <thead>
         <thead>
+<tr>
             <th id="header-code" onclick="toggleSort('code')">Kurskod <span></span></th>
             <th id="header-coursename" onclick="toggleSort('coursename')">Kursnamn <span></span></th>
             <th>Progression</th> <!-- Ingen sorteringsfunktion -->
+</tr>
         </thead>
-                                            </thead>
-    <tbody id="tabelldata">
+        <tbody id="tabelldata">
 
-    </tbody>
+        </tbody>
 
-</table>
-<script src="js/js.js"></script>
+    </table>
+    <script src="js/js.js"></script>
 </body>
 
 </html>
