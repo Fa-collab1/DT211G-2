@@ -15,23 +15,27 @@ async function processData() {
     try {
         const result = await fetchData(); // Väntar på att data ska hämtas
         console.table(result);
+        let table = document.getElementById("tabelldata");
+        let tableContent = '';
+
+        result.forEach((item, i) => {
+            tableContent += `<tr>
+                <td>${item.code}</td>
+                <td>${item.coursename}</td>
+                <td>${item.progression}</td>
+            </tr>`;
+        });
+
+        table.innerHTML += tableContent;
+
     } catch (error) {
-        // Hantera fel om det uppstår vid hämtning eller bearbetning av data
+        console.error('Error:', error);
     }
 }
-
 /*
-        <tr>
-            <td><a href="http://www.ica.se">Kurskod</a></td>
-            <td>Kursnamn</td>
-            <td>Progression</td>
-        </tr>
-
     ska kunna göras:
     Sortera i stigande och fallande ordning på kurskod, kursnamn och progression.
     Filtrera på kursnamn och kurskod.
 
 */
-
-
 processData();

@@ -1,0 +1,40 @@
+/* Grundläggande tabellstilar */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2.5vw 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15);
+}
+
+/* Stilar för tabellhuvud */
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+/* Lägger till zebra-stripning för rader */
+tbody tr {
+    border-bottom: 0.1vw solid darkblue;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #ffffd9;
+}
+
+tbody tr:last-of-type {
+    border-bottom: 0.2vw solid #009879;
+}
+
+tbody tr:hover {
+    background-color:  lightcyan;
+}
+
+/* Stilar för celler */
+th, td {
+    padding: 1.2vw 1.5vw;
+}
+
