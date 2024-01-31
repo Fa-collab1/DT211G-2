@@ -54,8 +54,8 @@ function toggleSort(column) {
         let isAscending = sortState[column] === 'ascending';
         sortState[column] = isAscending ? 'descending' : 'ascending';
         sortData(column, !isAscending);
-       }
-       return;
+    }
+    return;
 }
 
 // Asynkron funktion för att hämta data från webbtjänsten.
@@ -84,17 +84,17 @@ async function processData() {
 // Funktion för att uppdatera innehållet i tabellen.
 function updateTable() {
     updateHeaders();
-// Hämtar söktermen och omvandlar den till gemener.
-const searchTerm = document.getElementById('filter').value.toLowerCase();
-// Filtrerar 'result'-arrayen för att endast inkludera de objekt
-// vars 'code' eller 'coursename' innehåller söktermen.
-const filteredResults = result.filter(item => {
-    return item.code.toLowerCase().includes(searchTerm) ||
-        item.coursename.toLowerCase().includes(searchTerm);
-});
+    // Hämtar söktermen och omvandlar den till gemener.
+    const searchTerm = document.getElementById('filter').value.toLowerCase();
+    // Filtrerar 'result'-arrayen för att endast inkludera de objekt
+    // vars 'code' eller 'coursename' innehåller söktermen.
+    const filteredResults = result.filter(item => {
+        return item.code.toLowerCase().includes(searchTerm) ||
+            item.coursename.toLowerCase().includes(searchTerm);
+    });
 
-// Uppdaterar tabellen med de filtrerade resultaten.
-generateTableRows(filteredResults);
+    // Uppdaterar tabellen med de filtrerade resultaten.
+    generateTableRows(filteredResults);
 
 }
 

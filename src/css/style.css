@@ -1,100 +1,145 @@
 /* Grundläggande stilar för alla tabeller */
 table {
-    width: 100%;                       /* Full bredd */
-    border-collapse: collapse;         /* Tar bort mellanrum mellan cellbordrar */
-    margin: 2.5vw 0;                   /* Vertikal marginal */
-    font-size: 0.9em;                  /* Textstorlek */
-    font-family: sans-serif;           /* Typsnitt */
-    min-width: 400px;                  /* Minsta bredd */
-    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15); /* Skugga runt tabellen */
+    width: 100%;
+    /* Full bredd */
+    border-collapse: collapse;
+    /* Tar bort mellanrum mellan cellbordrar */
+    margin: 2.5vw 0;
+    /* Vertikal marginal */
+    font-size: 0.9em;
+    /* Textstorlek */
+    font-family: sans-serif;
+    /* Typsnitt */
+    min-width: 400px;
+    /* Minsta bredd */
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.15);
+    /* Skugga runt tabellen */
 }
 
 /* Media query för skärmar bredare än 1000px */
 @media screen and (min-width: 1000px) {
     table {
-        width: 60%;                   /* Bredd på 60% av föräldraelementet */
-        margin-left: auto;            /* Centrerar tabellen horisontellt */
+        width: 60%;
+        /* Bredd på 60% av föräldraelementet */
+        margin-left: auto;
+        /* Centrerar tabellen horisontellt */
         margin-right: auto;
     }
 }
 
 /* Stilar för tabellhuvudet */
 thead tr {
-    background-color: #009879;        /* Bakgrundsfärg */
-    color: #ffffff;                   /* Textfärg */
-    text-align: left;                 /* Textjustering */
-    font-size: 1.7em;                 /* Textstorlek */
+    background-color: #009879;
+    /* Bakgrundsfärg */
+    color: #ffffff;
+    /* Textfärg */
+    text-align: left;
+    /* Textjustering */
+    font-size: 1.7em;
+    /* Textstorlek */
 }
 
 /* Zebra-stripning för tabellrader */
 tbody tr {
-    border-bottom: 0.1vw solid darkblue; /* Linje under varje rad */
+    border-bottom: 0.1vw solid darkblue;
+    /* Linje under varje rad */
 }
 
 tbody tr:nth-of-type(even) {
-    background-color: #ffffd9;        /* Bakgrundsfärg för jämna rader */
+    background-color: #ffffd9;
+    /* Bakgrundsfärg för jämna rader */
 }
 
 tbody tr:last-of-type {
-    border-bottom: 0.2vw solid #009879; /* Tjockare linje under sista raden */
+    border-bottom: 0.2vw solid #009879;
+    /* Tjockare linje under sista raden */
 }
 
 tbody tr:hover {
-    background-color: lightcyan;      /* Bakgrundsfärg vid hovring */
+    background-color: lightcyan;
+    /* Bakgrundsfärg vid hovring */
 }
 
 /* Stilar för celler */
-th, td {
-    padding: 1.2vw 1.5vw;             /* Inre marginal (padding) */
+th,
+td {
+    padding: 1.2vw 1.5vw;
+    /* Inre marginal (padding) */
 }
 
-th:nth-child(1), td:nth-child(1) {   /* Stilar för första kolumnen */
-    width: 30%;                       /* Bredd */
-    text-align: center;               /* Centrerad text */
+th:nth-child(1),
+td:nth-child(1) {
+    /* Stilar för första kolumnen */
+    width: 30%;
+    /* Bredd */
+    text-align: center;
+    /* Centrerad text */
 }
 
 /* Media query för skärmar bredare än 2000px */
 @media screen and (min-width: 1500px) {
-    th:nth-child(1), td:nth-child(1) {
-        width: 20%;                   /* Bredd på 60% av föräldraelementet */
+
+    th:nth-child(1),
+    td:nth-child(1) {
+        width: 20%;
+        /* Bredd på 60% av föräldraelementet */
     }
 }
 
-th:nth-child(3), td:nth-child(3) {   /* Stilar för tredje kolumnen */
-    width: 20%;                       /* Bredd */
+th:nth-child(3),
+td:nth-child(3) {
+    /* Stilar för tredje kolumnen */
+    width: 20%;
+    /* Bredd */
     text-align: center;
 }
 
 /* Stil för huvudrubrik (h1) */
 h1 {
-    text-align: center;               /* Centrerad rubrik */
-    font-size: 4.5em;                 /* Stor textstorlek */
-    margin: 1.5vw 0;                  /* Vertikal marginal */
+    text-align: center;
+    /* Centrerad rubrik */
+    font-size: 4.5em;
+    /* Stor textstorlek */
+    margin: 1.5vw 0;
+    /* Vertikal marginal */
 }
 
 /* Stilar för sökfältets inputelement */
 input[type=text] {
-    width: 100%;                      /* Full bredd inom #searchField */
-    padding: 1vw;                     /* Padding */
-    margin: 0.5vw 0;                  /* Margin */
-    box-sizing: border-box;           /* Inkludera padding och border i bredden */
-    border: 0.2vw solid #ccc;         /* Kant */
-    border-radius: 0.5vw;             /* Runda hörn */
-    font-size: 1.2em;                 /* Textstorlek */
-    background-color: #f8f8f8;        /* Bakgrundsfärg */
-    text-align: center;               /* Centrerad text */
+    width: 100%;
+    /* Full bredd inom #searchField */
+    padding: 1vw;
+    /* Padding */
+    margin: 0.5vw 0;
+    /* Margin */
+    box-sizing: border-box;
+    /* Inkludera padding och border i bredden */
+    border: 0.2vw solid #ccc;
+    /* Kant */
+    border-radius: 0.5vw;
+    /* Runda hörn */
+    font-size: 1.2em;
+    /* Textstorlek */
+    background-color: #f8f8f8;
+    /* Bakgrundsfärg */
+    text-align: center;
+    /* Centrerad text */
 }
 
 /* Stilar för sökfältets behållare */
 #filterField {
-    width: 100%;                      /* Full bredd */
-    margin: 1vw auto;                 /* Centrerar behållaren */
-    box-sizing: border-box;           /* Inkludera padding och border i bredden */
+    width: 100%;
+    /* Full bredd */
+    margin: 1vw auto;
+    /* Centrerar behållaren */
+    box-sizing: border-box;
+    /* Inkludera padding och border i bredden */
 }
 
 /* Media query för sökfältets behållare för skärmar bredare än 1000px */
 @media screen and (min-width: 1000px) {
     #filterField {
-        width: 60%;                   /* Bredd på 60% av föräldraelementet */
+        width: 60%;
+        /* Bredd på 60% av föräldraelementet */
     }
 }
