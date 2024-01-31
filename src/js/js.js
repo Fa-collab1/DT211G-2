@@ -1,5 +1,21 @@
 'use strict';
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Lägg till event listener för filterfältet
+    document.getElementById('filter').addEventListener('keyup', updateTable);
+
+    // Lägg till event listeners för varje sorteringsbar kolumn
+    document.getElementById('header-code').addEventListener('click', () => toggleSort('code'));
+    document.getElementById('header-coursename').addEventListener('click', () => toggleSort('coursename'));
+    document.getElementById('header-progression').addEventListener('click', () => toggleSort('progression'));
+
+    // Starta processen för att hämta och visa data
+    processData();
+});
+
+
+
 // Globala variabler för att hålla reda på data.
 let result = []; // Global variabel för att lagra resultatet från API-anropet
 let originalData = []; // En kopia av originaldatan för osorterat tillstånd
