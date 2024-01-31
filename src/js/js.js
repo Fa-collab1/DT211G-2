@@ -46,18 +46,16 @@ function toggleSort(column) {
     // Växla sorteringsläget för den aktuella kolumnen.
     if (sortState[column] === 'descending') {
         // Återgå till osorterat läge och använd ursprungsdata.
-        result = originalData.slice();
         sortState[column] = 'unsorted';
+        result = originalData.slice();
+        updateTable();
     } else {
         // Växla mellan stigande och fallande ordning.
         let isAscending = sortState[column] === 'ascending';
-        sortData(column, !isAscending);
         sortState[column] = isAscending ? 'descending' : 'ascending';
-    }
-
-    // Uppdatera tabellen och rubrikerna.
-    updateTable();
-    updateHeaders();
+        sortData(column, !isAscending);
+       }
+       return;
 }
 
 // Asynkron funktion för att hämta data från webbtjänsten.
@@ -85,21 +83,32 @@ async function processData() {
 
 // Funktion för att uppdatera innehållet i tabellen.
 function updateTable() {
-    let table = document.getElementById("tabelldata");
-    let tableContent = '';
+    updateHeaders();
+// Hämtar söktermen och omvandlar den till gemener.
+const searchTerm = document.getElementById('filter').value.toLowerCase();
+// Filtrerar 'result'-arrayen för att endast inkludera de objekt
+// vars 'code' eller 'coursename' innehåller söktermen.
+const filteredResults = result.filter(item => {
+    return item.code.toLowerCase().includes(searchTerm) ||
+        item.coursename.toLowerCase().includes(searchTerm);
+});
 
-    // Skapa tabellrader baserat på data.
-    result.forEach((item) => {
-        tableContent += `<tr>
+// Uppdaterar tabellen med de filtrerade resultaten.
+generateTableRows(filteredResults);
+
+}
+
+function generateTableRows(rowData) {
+    let table = document.getElementById("tabelldata");
+    let rows = '';
+    rowData.forEach((item) => {
+        rows += `<tr>
             <td>${item.code}</td>
             <td>${item.coursename}</td>
             <td>${item.progression}</td>
         </tr>`;
     });
-
-    // Uppdatera tabellens HTML och rubrikerna.
-    table.innerHTML = tableContent;
-    updateHeaders();
+    table.innerHTML = rows;
 }
 
 // Funktion för att sortera data.
@@ -120,6 +129,7 @@ function sortData(column, isAscending) {
     // Uppdatera tabellen efter sortering.
     updateTable();
 }
+
 
 // Starta processen för att hämta och visa
 processData() 
