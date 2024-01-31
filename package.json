@@ -4,7 +4,7 @@
   "type": "module",
   "description": "",
   "source": "src/index.html",
-    "scripts": {
+  "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,7 +16,8 @@
     "node-fetch": "^3.3.2"
   },
   "devDependencies": {
+    "netlify-cli": "^17.15.5",
     "parcel": "^2.11.0",
-    "sharp": "^0.31.3"
+    "sharp": "^0.33.2"
   }
 }
