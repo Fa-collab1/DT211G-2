@@ -68,6 +68,7 @@ async function fetchData() {
         return data;
     } catch (error) {
         console.error('Fetch error:', error);
+        alert('Kunde inte hämta data från webbtjänsten.');
         throw error;
     }
 }
