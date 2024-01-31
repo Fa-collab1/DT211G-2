@@ -7,7 +7,8 @@ let originalData = []; // En kopia av originaldatan för osorterat tillstånd
 // Globala variabler för att hålla reda på sorteringsläget för varje kolumn.
 let sortState = {
     code: 'unsorted',      // Sorteringsstatus för 'code'-kolumnen. (kurskod)
-    coursename: 'unsorted' // Sorteringsstatus för 'coursename'-kolumnen. (kursnamn)
+    coursename: 'unsorted', // Sorteringsstatus för 'coursename'-kolumnen. (kursnamn)
+    progression: 'unsorted' // Sorteringsstatus för 'progression'-kolumnen. (kursnamn)
 };
 
 // Objekt som innehåller tecken för olika sorteringsstatus.
@@ -23,6 +24,7 @@ function updateHeaders() {
     const headers = {
         'code': document.getElementById('header-code').querySelector('span'),
         'coursename': document.getElementById('header-coursename').querySelector('span'),
+        'progression': document.getElementById('header-progression').querySelector('span'),
     };
 
     // Loopa igenom varje kolumn och uppdatera rubriken med rätt pil.
